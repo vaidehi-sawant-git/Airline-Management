@@ -20,7 +20,7 @@
 and then execute  
 `npx sequelize db:migrate`
 
-##DB Design
+## DB Design
 - Airplane Table
 - Flight Table
 - Airport Table
