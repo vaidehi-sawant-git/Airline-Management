@@ -30,4 +30,4 @@ and then execute
 - A Flight belongs to a Airplane but one Airplane can be used in multiple Flights.
 - A City can many Airports but an Airport can have only one City.
 - One Airport can have many Flights, but a Flight can have only one Airport. 
-- One Airport can have many Flights, but a Flight can have only one Airport. 
+
