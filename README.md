@@ -22,7 +22,6 @@ and then execute
 
 ## DB Design
 - Airplane Table 
-- Airplane Table
 - Flight Table
 - Airport Table
 - City Table
