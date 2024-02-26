@@ -3,6 +3,7 @@ const {PORT} = require('./config/SeverConfig');
 const bodyParser = require('body-parser');
 
 const ApiRoutes = require('./routes/index');
+const db = require('./models/index');
 
 const setupStartServer = async ()=>
 {
@@ -14,6 +15,9 @@ const setupStartServer = async ()=>
     app.listen(PORT,()=>
     {
         console.log(`Server Started On ${PORT}`);
+        if(process.env.SYNC_DB){
+            db.sequelize.sync({alter : true});
+        }
     })
 }
 
