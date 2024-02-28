@@ -36,7 +36,39 @@ and then execute
     Relationship -> City has many airports, Airport belongs to one City(one to many)
 ```
 npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
+```
+
+## Creating Seeders
+```
 npx sequelize seed:generate --name add-airports //seeder file creation
 npx sequelize db:seed:all
 
+```
+## To sync Database 
+```
+const db = require('./models/index');
+ if(process.env.SYNC_DB){
+            db.sequelize.sync({alter : true});
+        }
+
+```
+## To create model associations
+Airport.js
+```
+static associate(models) {
+      this.belongsTo(models.City,{
+        foreignKey : 'cityId',
+        onDelete : 'CASCADE'
+      })
+    }
+```
+City.js
+```
+static associate(models) {
+      // define association here
+      this.hasMany(models.Airport,
+        {
+          foreignKey : 'cityId'
+        })
+    }
 ```
