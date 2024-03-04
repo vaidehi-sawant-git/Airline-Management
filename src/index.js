@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 
 const ApiRoutes = require('./routes/index');
 const db = require('./models/index');
-
 const setupStartServer = async ()=>
 {
 
