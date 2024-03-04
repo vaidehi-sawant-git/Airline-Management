@@ -10,6 +10,9 @@ router.get('/city',cityController.getAll);
 router.get('/city/:id',cityController.get)
 
 router.post('/flights',flightController.create);
+router.get('/flights',flightController.getAll);
+router.get('/flights/:id',flightController.get);
+
 
 module.exports = router;
  
